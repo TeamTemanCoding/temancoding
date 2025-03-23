@@ -8,4 +8,6 @@ const PageContainer = ({ children }: { children: React.ReactNode }) => {
     )
 }
 
+PageContainer.displayName = "PageContainer"
+
 export default PageContainer
