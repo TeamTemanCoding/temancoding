@@ -2,7 +2,7 @@ import React from 'react'
 
 const PageContainer = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div className='h-screen'>
+        <div className='h-auto container overflow-x-hidden'>
             {children}
         </div>
     )

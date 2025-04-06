@@ -1,19 +1,14 @@
 "use client"
 
-import { Button } from "@heroui/react";
 import PageContainer from "~/components/layouts/PageContainer";
-import SectionContainer from "~/components/layouts/SectionContainer";
+import BenefitSection from "~/components/section/BenefitSection";
+import HeroSection from "~/components/section/HeroSection";
 
 const Home = () => {
   return (
     <PageContainer>
-      <SectionContainer>
-        <h1 className="text-4xl font-bold text-center">Hero</h1>
-        <Button color="primary" variant="solid">Get Started</Button>
-      </SectionContainer>
-      <SectionContainer>
-        <h1 className="text-4xl font-bold text-center">Benefit</h1>
-      </SectionContainer>
+      <HeroSection />
+      <BenefitSection />
     </PageContainer>
   );
 }
