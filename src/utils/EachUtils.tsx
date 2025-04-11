@@ -1,11 +1,11 @@
-import { Children, ReactNode } from "react";
+import React, { Children } from "react";
 
 type EachUtilsProps<T> = {
-  render: (item: T, index: number) => ReactNode;
+  render: (item: T, index: number) => React.ReactNode;
   of: T[];
 };
 
-export const EachUtils = <T,>({ render, of }: EachUtilsProps<T>) => {
+const EachUtils = <T,>({ render, of }: EachUtilsProps<T>) => {
   if (of.length < 1) {
     console.log("Data is empty");
     return null;
@@ -14,5 +14,7 @@ export const EachUtils = <T,>({ render, of }: EachUtilsProps<T>) => {
     console.log("Render is not a function");
     return null;
   }
-  return <>{Children.toArray(of.map((item, i) => render(item, i)))}</>;
+  return Children.toArray(of.map((item, i) => render(item, i)));
 };
+
+export default EachUtils

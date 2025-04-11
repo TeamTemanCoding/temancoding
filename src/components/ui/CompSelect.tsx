@@ -14,7 +14,7 @@ const CompSelect = ({ ...props }: IPropsSelect) => {
     <Select
       defaultSelectedKeys={props.defaultSelected}
       aria-label="Language selection"
-      className="!text-zinc-50 min-w-[120px]"
+      className="text-zinc-50 min-w-[120px]"
       variant="flat"
       classNames={{
         trigger: "bg-transparent data-[hover=true]:bg-transparent border-0",
@@ -24,7 +24,7 @@ const CompSelect = ({ ...props }: IPropsSelect) => {
       }}
       popoverProps={{
         classNames: {
-          content: "bg-zinc-50 border-0 w-[135px]",
+          content: "bg-zinc-50 border-0 w-auto !text-zinc-800",
         },
       }}
       startContent={<Globe className="text-zinc-50 text-2xl" weight="bold" />}

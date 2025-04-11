@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer>Footer</footer>
+    <footer className='text-center h-[96px] bg-black text-white flex items-center justify-center'>Copyright 2025 &copy; Teman Coding</footer>
   )
 }
 

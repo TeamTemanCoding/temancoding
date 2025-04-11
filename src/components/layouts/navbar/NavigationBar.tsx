@@ -12,7 +12,7 @@ import {
 } from "@heroui/react";
 import useScroll from "~/hooks/useScroll";
 import Image from "next/image";
-import CompSelect from "~/components/ui/ComSelect";
+import CompSelect from "~/components/ui/CompSelect";
 
 interface MenuItem {
     name: string;
@@ -35,17 +35,15 @@ export default function NavigationBar() {
         <Navbar
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
-            className="bg-transparent fixed w-screen px-4 sm:px-24 sm:py-5 z-50"
+            className={`bg-transparent fixed w-screen px-4 sm:px-24 z-50 transition-all ease-in-out duration-300- ${isScroll ? "sm:py-3" : "sm:py-5"}`}
             isBlurred={isScroll}
         >
-            {/* LEFT SECTION */}
             <NavbarContent>
                 <NavbarBrand>
-                    <Image src="/images/logo.svg" alt="Logo" width={119} height={119} />
+                    <Image src="/images/logo.svg" alt="Logo" width={119} height={119} draggable={false} />
                 </NavbarBrand>
             </NavbarContent>
 
-            {/* CENTER NAV LINKS (Desktop) */}
             <NavbarContent className="hidden sm:flex gap-8" justify="center">
                 {menuItems.map((item) => (
                     <NavbarItem key={item.name}>
