@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import Portofolio from './Portofolio';
 
 const CompSwiper = () => {
@@ -16,7 +16,9 @@ const CompSwiper = () => {
                 dynamicMainBullets: 1,
             }}
             navigation={true}
-            modules={[Pagination, Navigation]}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            initialSlide={5}
+            modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper"
         >
             <SwiperSlide><Portofolio /></SwiperSlide>

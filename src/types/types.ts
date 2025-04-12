@@ -10,5 +10,8 @@ export interface IPriceCard {
   price: number;
   description: string;
   isPopular: boolean;
-  plans: string[];
+  features: {
+    label: string;
+    isInclude: boolean;
+  }[];
 }

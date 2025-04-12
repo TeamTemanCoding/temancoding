@@ -38,13 +38,14 @@ const pricings: IPriceCard[] = [
     title: "Custom Bundle",
     price: 50000,
     description:
-      "Suitable for small businesses and startups who want to have a professional website to increase their online presence.",
+      "Basic static homepage with mobile-friendly layout, great for simple personal branding.",
     isPopular: true,
-    plans: [
-      "Custom Design",
-      "Responsive Layout",
-      "Basic SEO Optimization",
-      "1 Month Free Support",
+    features: [
+      { label: "1 Static Page", isInclude: true },
+      { label: "Responsive Layout", isInclude: true },
+      { label: "Template Design", isInclude: true },
+      { label: "Basic SEO", isInclude: false },
+      { label: "Custom Design", isInclude: false },
     ],
   },
   {
@@ -52,13 +53,14 @@ const pricings: IPriceCard[] = [
     title: "Student Bundle",
     price: 150000,
     description:
-      "Suitable for small businesses and startups who want to have a professional website to increase their online presence.",
+      "Personal website with up to 3 pages, suitable for portfolios, resumes, or blogs.",
     isPopular: false,
-    plans: [
-      "Custom Design",
-      "Responsive Layout",
-      "Basic SEO Optimization",
-      "3 Month Free Support",
+    features: [
+      { label: "Up to 3 Pages", isInclude: true },
+      { label: "Responsive Layout", isInclude: true },
+      { label: "Basic SEO", isInclude: true },
+      { label: "Simple Blog", isInclude: true },
+      { label: "CMS Setup", isInclude: false },
     ],
   },
   {
@@ -66,13 +68,14 @@ const pricings: IPriceCard[] = [
     title: "Pro Bundle",
     price: 1500000,
     description:
-      "Suitable for small businesses and startups who want to have a professional website to increase their online presence.",
+      "Professional website with custom layout and advanced SEO, perfect for growing businesses.",
     isPopular: false,
-    plans: [
-      "Custom Design",
-      "Responsive Layout",
-      "Advanced SEO Optimization",
-      "6 Month Free Support",
+    features: [
+      { label: "Up to 8 Pages", isInclude: true },
+      { label: "Custom Design", isInclude: true },
+      { label: "Advanced SEO", isInclude: true },
+      { label: "CMS Setup", isInclude: true },
+      { label: "E-commerce Integration", isInclude: false },
     ],
   },
   {
@@ -80,13 +83,14 @@ const pricings: IPriceCard[] = [
     title: "Company Bundle",
     price: 7000000,
     description:
-      "Suitable for Company and startups who want to have a professional website to increase their online presence.",
+      "Full-featured company site with unlimited pages, custom system, and premium support.",
     isPopular: false,
-    plans: [
-      "Custom Design",
-      "Responsive Layout",
-      "Advanced SEO Optimization",
-      "6 Month Free Support",
+    features: [
+      { label: "Unlimited Pages", isInclude: true },
+      { label: "Full Custom Design", isInclude: true },
+      { label: "Enterprise SEO", isInclude: true },
+      { label: "E-commerce Integration", isInclude: true },
+      { label: "Admin Dashboard", isInclude: true },
     ],
   },
 ];

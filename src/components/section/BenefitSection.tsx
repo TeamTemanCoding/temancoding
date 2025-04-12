@@ -5,7 +5,7 @@ import CompAccordion from '../ui/CompAccordion'
 
 const BenefitSection = () => {
     return (
-        <SectionContainer className='h-full -mt-20 sm:-mt-0 sm:h-[769px]'>
+        <SectionContainer className='h-full -mt-20 sm:-mt-0 sm:h-[760px]' id='benefits' container>
             <div className='grid grid-rows-2 sm:grid-cols-2 items-center sm:place-items-center sm:max-w-[1300px] sm:mx-auto sm:gap-16'>
                 <Image src={"./images/benefits.svg"} alt='benefit' width={550} height={550} draggable={false} className='w-[650px] sm:w-[550px]' />
                 <div className='h-auto -mt-16 sm:-mt-0'>

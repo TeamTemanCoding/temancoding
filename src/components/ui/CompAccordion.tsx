@@ -1,11 +1,8 @@
 import { Accordion, AccordionItem } from '@heroui/react'
 import React from 'react'
 import { benefits } from '~/data/datas';
-import EachUtils from '~/utils/EachUtils';
 
 const CompAccordion = () => {
-    const defaultContent =
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
     return (
         <Accordion selectionMode='single' dividerProps={{ className: "bg-zinc-50/40" }} className='bg-transparent' defaultSelectedKeys={["5"]}>

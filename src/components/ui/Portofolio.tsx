@@ -5,8 +5,8 @@ import React from 'react'
 
 const Portofolio = () => {
     return (
-        <div className='grid grid-cols-2 gap-7 max-w-[1000px] mx-auto place-items-center'>
-            <Image src={"/images/portofolio/portofolio1.png"} alt='1' width={485} height={485} />
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-7 max-w-[1000px] mx-auto place-items-center'>
+            <Image src={"/images/portofolio/portofolio1.png"} alt='1' width={485} height={485} className='hidden sm:block' />
             <div className='text-left flex flex-col gap-5'>
                 <h4 className='text-[38px] font-semibold'>Neonest.id Website</h4>
                 <div className='flex items-center gap-3'>

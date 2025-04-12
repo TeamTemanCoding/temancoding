@@ -1,7 +1,7 @@
 "use client"
 
-import FloatingCS from "~/components/FloatingCS/FloatingCS";
-import HeroBanner from "~/components/HeroBanner/HeroBanner";
+import FloatingCS from "~/components/ui/FloatingCS";
+import HeroBanner from "~/components/ui/HeroBanner";
 import PageContainer from "~/components/layouts/PageContainer";
 import BenefitSection from "~/components/section/BenefitSection";
 import HeroSection from "~/components/section/HeroSection";
