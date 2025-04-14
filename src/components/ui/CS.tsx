@@ -1,6 +1,5 @@
 import { Avatar, Input } from '@heroui/react'
 import { PaperPlaneRight } from '@phosphor-icons/react'
-import Image from 'next/image'
 import React from 'react'
 
 const CS = () => {
