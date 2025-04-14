@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { AuthForm } from "~/components/ui/Form";
+import { AuthForm } from "~/components/ui/form/AuthForm";
+
 
 export default function ResetPassword() {
   return (
