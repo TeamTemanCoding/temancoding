@@ -1,0 +1,18 @@
+import Image from "next/image";
+import { AuthForm } from "~/components/ui/form/AuthForm";
+
+
+export default function ResetPassword() {
+  return (
+    <>
+      <div className="min-h-screen bg-[url('/images/backgrounds/signin.svg')] bg-cover bg-center flex flex-col">
+        <div className="px-6 py-6 sm:px-8 sm:py-8">
+          <Image src="/images/logo.svg" alt="Logo" width={143} height={46.03} />
+        </div>
+        <div className="flex flex-1 items-center">
+          <AuthForm variant="ResetPassword" />
+        </div>
+      </div>
+    </>
+  );
+}
