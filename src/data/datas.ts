@@ -1,4 +1,4 @@
-import { IBenefit, IPriceCard } from "~/types/types";
+import { IBenefit, IPortofolios, IPriceCard } from "~/types/types";
 
 const benefits: IBenefit[] = [
   {
@@ -95,4 +95,50 @@ const pricings: IPriceCard[] = [
   },
 ];
 
-export { benefits, pricings };
+const portfolios: IPortofolios[] = [
+  {
+    id: 1,
+    title: "Coffee Shop Landing Page",
+    slug: "coffee-shop-landing",
+    client_name: "KopiSenja",
+    category: "Website",
+    thumbnail_url: "/images/portfolio/coffee-shop.png",
+    project_url: "https://kopisenja.id",
+    description: "Landing page clean untuk brand kopi lokal yang fokus pada estetika dan storytelling.",
+    tech_stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    started_at: "2023-03-01",
+    completed_at: "2023-04-15",
+    is_featured: true,
+  },
+  {
+    id: 2,
+    title: "Mobile App UI for Fitness Coach",
+    slug: "fitness-coach-app",
+    client_name: "FitBro",
+    category: "Mobile App",
+    thumbnail_url: "/images/portfolio/fitness-app.png",
+    project_url: "",
+    description: "Desain UI untuk aplikasi fitness dengan fitur tracking latihan dan meal plan.",
+    tech_stack: ["Figma", "React Native"],
+    started_at: "2023-06-10",
+    completed_at: "2023-07-05",
+    is_featured: false,
+  },
+  {
+    id: 3,
+    title: "Brand Identity for Legal Startup",
+    slug: "legal-branding",
+    client_name: "HukumKu",
+    category: "Branding",
+    thumbnail_url: "/images/portfolio/legal-brand.png",
+    project_url: "",
+    description: "Logo, palet warna, dan guideline branding untuk startup layanan hukum digital.",
+    tech_stack: ["Adobe Illustrator", "Photoshop"],
+    started_at: "2022-11-01",
+    completed_at: "2022-12-10",
+    is_featured: true,
+  },
+];
+
+
+export { benefits, pricings, portfolios };
