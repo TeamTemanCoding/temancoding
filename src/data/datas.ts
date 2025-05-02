@@ -1,5 +1,22 @@
 import { IBenefit, IPortofolios, IPriceCard } from "~/types/types";
 
+const DATA_CS = {
+  info: `Teman Coding didirikan dengan tujuan membantu bisnis dan individu membangun kehadiran digital yang profesional dan menarik. Apa yang awalnya dimulai sebagai hobi menyenangkan kini telah berkembang menjadi tim yang berdedikasi dalam menyediakan layanan pengembangan dan pemeliharaan website yang fungsional, responsif, dan sesuai kebutuhan. Dengan fokus pada kualitas dan inovasi, setiap baris kode yang kami tulis adalah langkah menuju solusi digital yang lebih baik.`,
+  founder: 'Satria Mika Narendra',
+  team: `Teman Coding memiliki 14 anggota yang terdiri dari 1 Founder, 1 Project Manager, 2 Lead Project, 3 Frontend, 3 Backend, 3 UI/UX, dan 1 Admin.`,
+  year: '2024',
+  orderWeb: 'Silakan menuju menu pricing dan pilih bundle yang tersedia.',
+  orderDesign: 'Pemesanan jasa desain bisa melalui menu service consultation.',
+  orderJoki: 'Pemesanan jasa joki tugas bisa melalui menu service consultation.',
+  payments: 'Metode pembayaran yang tersedia: QRIS, BANK, dan DANA.',
+  jasa: "Kami menyediakan jasa pembuatan dan pemeliharaan website serta menyediakan pembuatan desain.",
+  joki: "Kami bisa bisa membantu anda dalam hal joki tugas website atau tugas desain.",
+  platforms: "Kami bekerja dengan teknologi terbaru seperti React, Next.js, dan lainnya untuk membangun website yang berkualitas.",
+  support: "Kami menyediakan layanan dukungan teknis selama 24/7 untuk memastikan website Anda tetap berjalan dengan baik.",
+  consult: "Untuk konsultasi desain, silakan hubungi kami melalui menu service consultation. Kami akan membantu Anda merancang solusi desain yang sesuai kebutuhan."
+}
+
+
 const benefits: IBenefit[] = [
   {
     id: 1,
@@ -141,4 +158,4 @@ const portfolios: IPortofolios[] = [
 ];
 
 
-export { benefits, pricings, portfolios };
+export { DATA_CS,benefits, pricings, portfolios };

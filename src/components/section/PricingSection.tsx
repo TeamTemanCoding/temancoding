@@ -18,11 +18,12 @@ const PricingSection = () => {
                                 Development
                             </span>
                         </span>
-                        <br />
+                        <span className="block lg:hidden"></span> 
                         <span className="text-transparent bg-gradient-to-r from-[#474FDD] via-[#3773DA] to-[#08BCE9] bg-clip-text">
                             Service
                         </span>
                     </h2>
+
                 </div>
                 <div className="mt-24 place-items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     <EachUtils of={pricings} render={data => (<PriceCard title={data.title} desc={data.description} price={data.price.toLocaleString('id-ID', {
