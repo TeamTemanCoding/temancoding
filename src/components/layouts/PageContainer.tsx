@@ -2,7 +2,7 @@ import React from 'react'
 
 const PageContainer = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div className='relative'>
+        <div className='relative overflow-x-hidden'>
             {children}
         </div>
     )

@@ -104,6 +104,9 @@ header {
 }
 
 @media (max-width: 768px) {
+  .swiper-slide {
+    padding: 150px 0 130px 0 !important;
+  }
   .swiper-button-prev {
     background-image: url('/images/icons/arrow.svg');
     background-repeat: no-repeat;

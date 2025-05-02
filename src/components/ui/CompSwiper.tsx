@@ -17,7 +17,7 @@ const CompSwiper = () => {
             }}
             navigation={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
-            initialSlide={5}
+            initialSlide={1}
             modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper"
         >
