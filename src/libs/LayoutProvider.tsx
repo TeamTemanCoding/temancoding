@@ -10,15 +10,12 @@ import NavigationBar from '~/components/layouts/navbar/NavigationBar';
 const Provider = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
   const isAuthPage = ["/sign-in", "/sign-up", "/reset-password"].includes(pathname); 
-  const isAdminPage = pathname.startsWith("/admin");
-
-  const shouldHideLayout = isAuthPage || isAdminPage;
 
   return (
     <HeroUIProvider>
-      {!shouldHideLayout && <NavigationBar />}
+      {!isAuthPage && <NavigationBar />}
       <main>{children}</main>
-      {!shouldHideLayout && <Footer />}
+      {!isAuthPage && <Footer />}
     </HeroUIProvider>
   );
 };
