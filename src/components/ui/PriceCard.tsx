@@ -26,7 +26,7 @@ const PriceCard = ({ title, price, desc, features, isPopular }: PriceCardProps) 
                     <h4 className='font-semibold text-[23px] mt-5 text-center'>{title}</h4>
                     <div className='mt-4'>
                         <p className="text-[13px] font-semibold">Start from</p>
-                        <h4 className="font-semibold text-[20px]"><sup>Rp</sup> {price} /month</h4>
+                        <h4 className="font-semibold text-[20px]"><sup>Rp</sup> {price} /project</h4>
                         <p className='text-[10px] mt-2 max-w-[266px] line-clamp-2'>{desc}</p>
                     </div>
                 </div>
