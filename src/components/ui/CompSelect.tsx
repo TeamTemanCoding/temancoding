@@ -24,7 +24,7 @@ const CompSelect = ({ ...props }: IPropsSelect) => {
       }}
       popoverProps={{
         classNames: {
-          content: "bg-zinc-50 border-0 w-auto !text-zinc-800",
+          content: "bg-zinc-50 border-0 w-full sm:w-auto !text-zinc-800",
         },
       }}
       startContent={<Globe className="text-zinc-50 text-2xl" weight="bold" />}

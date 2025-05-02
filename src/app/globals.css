@@ -15,7 +15,8 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 100px;
+  /* outline: 2px solid blue; */
 }
 
 body {
@@ -100,4 +101,25 @@ header {
 
 .swiper-pagination-bullet {
   background-color: #FFFFFF !important;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-prev {
+    background-image: url('/images/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 35px !important;
+    height: 35px !important;
+    rotate: 180deg;
+  }
+  
+  .swiper-button-next {
+    background-image: url('/images/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 35px !important;
+    height: 35px !important;
+  }
 }

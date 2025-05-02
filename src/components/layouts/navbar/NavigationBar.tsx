@@ -24,23 +24,22 @@ export default function NavigationBar() {
     const { isScroll } = useScroll();
 
     const menuItems: MenuItem[] = [
-        { name: "Home", href: "#" },
-        { name: "About", href: "#" },
-        { name: "Service", href: "#" },
-        { name: "Contact", href: "#" },
-        { name: "FAQ", href: "#" },
+        { name: "Home", href: "/#home" },
+        { name: "About", href: "/about" },
+        { name: "Benefit", href: "/#benefits" },
+        { name: "Pricing", href: "/#pricing" },
     ];
 
     return (
         <Navbar
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
-            className={`bg-transparent fixed w-screen px-4 sm:px-24 z-50 transition-all ease-in-out duration-300- ${isScroll ? "sm:py-3" : "sm:py-5"}`}
+            className={`bg-transparent fixed w-screen px-4 sm:px-24 z-50 transition-all ease-in-out duration-300- ${isScroll ? "sm:py-3 " : "sm:py-5"} ${isMenuOpen && 'bg-[#0A0628]/90 backdrop-blur-md'}`}
             isBlurred={isScroll}
         >
             <NavbarContent>
                 <NavbarBrand>
-                    <Image src="/images/logo.svg" alt="Logo" width={119} height={119} draggable={false} />
+                    <Image src="/images/logo.svg" alt="Logo" width={119} height={119} draggable={false} className="w-[100px] h-[100px] sm:w-[119px] sm:h-[119px]" />
                 </NavbarBrand>
             </NavbarContent>
 
@@ -64,39 +63,39 @@ export default function NavigationBar() {
                 />
 
                 <NavbarItem className="hidden sm:flex">
-                    <Button
-                        as={Link}
-                        href="#"
-                        variant="solid"
-                        className="bg-gradient-to-r from-[#36D1DC] via-[#2785DE] to-[#1F5BDF] text-white w-[137px] rounded-[6px] hover:opacity-100"
-                    >
-                        Get Started
-                    </Button>
-                </NavbarItem>
-            </NavbarContent>
-
-            {/* MOBILE MENU */}
-            <NavbarMenu className="bg-[#0A0628]/90 backdrop-blur-md">
-                {menuItems.map((item, index) => (
-                    <NavbarMenuItem key={`${item.name}-${index}`}>
-                        <Link className="w-full text-white" href={item.href} size="lg">
-                            {item.name}
-                        </Link>
-                    </NavbarMenuItem>
-                ))}
-                <div className="mt-3">
-                    <NavbarMenuItem className="block sm:hidden">
-                        <CompSelect item={["English", "Indonesia"]} defaultSelected={["english"]} />
-                    </NavbarMenuItem>
-                    <div className="px-4 mt-4 sm:hidden">
+                    <Link href="/sign-in" className="w-full">
                         <Button
-                            as={Link}
-                            href="#"
                             variant="solid"
                             className="w-full bg-gradient-to-r from-[#36D1DC] via-[#2785DE] to-[#1F5BDF] text-white rounded-[6px] hover:opacity-100"
                         >
                             Get Started
                         </Button>
+                    </Link>
+                </NavbarItem>
+            </NavbarContent>
+
+            {/* MOBILE MENU */}
+            <NavbarMenu className="bg-[#0A0628]/90 backdrop-blur-md w-full">
+                {menuItems.map((item, index) => (
+                    <NavbarMenuItem key={`${item.name}-${index}`}>
+                        <Link className="w-full text-white" href={item.href} size="lg" onPress={() => setIsMenuOpen(false)} >
+                            {item.name}
+                        </Link>
+                    </NavbarMenuItem>
+                ))}
+                <div className="mt-3">
+                    <NavbarMenuItem className="block sm:hidden w-full">
+                        <CompSelect item={["English", "Indonesia"]} defaultSelected={["english"]} />
+                    </NavbarMenuItem>
+                    <div className="px-4 mt-4 sm:hidden">
+                        <Link href="/sign-in" className="w-full">
+                            <Button
+                                variant="solid"
+                                className="w-full bg-gradient-to-r from-[#36D1DC] via-[#2785DE] to-[#1F5BDF] text-white rounded-[6px] hover:opacity-100"
+                            >
+                                Get Started
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </NavbarMenu>
