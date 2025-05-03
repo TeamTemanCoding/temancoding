@@ -17,7 +17,7 @@ interface PriceCardProps {
 }
 
 const PriceCard = ({ title, price, desc, features, isPopular }: PriceCardProps) => {
-    const message = `Hello, I am interested in the ${title}. Can you provide me with more information?`;
+    const message = `Halo, saya tertarik dengan ${title}. Bisakah Anda memberikan saya lebih banyak informasi?`;
     return (
         <Card className={`relative w-[270px] h-[420px] rounded-[14px] bg-white shadow-lg !px-4 ${isPopular ? "bg-[url('/images/backgrounds/flag.svg')] bg-no-repeat bg-right-top" : ""}`}>
             <Image src={"./images/icons/crowd.svg"} alt='crowd' width={32} height={32} className='absolute right-1 top-1' draggable={false} />

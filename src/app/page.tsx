@@ -1,6 +1,6 @@
 "use client"
 
-import FloatingCS from "~/components/ui/FloatingCS";
+import FloatingCS from "~/components/ui/Customer Service/FloatingCS";
 import HeroBanner from "~/components/ui/HeroBanner";
 import PageContainer from "~/components/layouts/PageContainer";
 import BenefitSection from "~/components/section/BenefitSection";
