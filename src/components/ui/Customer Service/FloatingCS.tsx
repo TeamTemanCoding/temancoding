@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
-import CS from './CS';
 import { X } from '@phosphor-icons/react';
 import { AnimatePresence, motion } from 'framer-motion';
+import CustomerService from '.';
 
 const FloatingCS = () => {
     const [show, setShow] = useState<boolean>(false);
@@ -13,12 +13,12 @@ const FloatingCS = () => {
                 {show && (
                     <motion.div
                         initial={{ scale: 0, y: 0 }}
-                        animate={{ scale: 1, y: 0, x: -5}}
+                        animate={{ scale: 1, y: 0, x: -5 }}
                         exit={{ scale: 0, y: 0 }}
                         transition={{ duration: 0.2 }}
                         className="fixed right-7 sm:right-10 bottom-[70px] sm:bottom-20 z-50 origin-bottom-right"
                     >
-                        <CS />
+                        <CustomerService />
                     </motion.div>
                 )}
             </AnimatePresence>

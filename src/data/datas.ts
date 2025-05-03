@@ -1,21 +1,41 @@
 import { IBenefit, IPortofolios, IPriceCard } from "~/types/types";
 
-const DATA_CS = {
-  info: `Teman Coding didirikan dengan tujuan membantu bisnis dan individu membangun kehadiran digital yang profesional dan menarik. Apa yang awalnya dimulai sebagai hobi menyenangkan kini telah berkembang menjadi tim yang berdedikasi dalam menyediakan layanan pengembangan dan pemeliharaan website yang fungsional, responsif, dan sesuai kebutuhan. Dengan fokus pada kualitas dan inovasi, setiap baris kode yang kami tulis adalah langkah menuju solusi digital yang lebih baik.`,
-  founder: 'Satria Mika Narendra',
-  team: `Teman Coding memiliki 14 anggota yang terdiri dari 1 Founder, 1 Project Manager, 2 Lead Project, 3 Frontend, 3 Backend, 3 UI/UX, dan 1 Admin.`,
-  year: '2024',
-  orderWeb: 'Silakan menuju menu pricing dan pilih bundle yang tersedia.',
-  orderDesign: 'Pemesanan jasa desain bisa melalui menu service consultation.',
-  orderJoki: 'Pemesanan jasa joki tugas bisa melalui menu service consultation.',
-  payments: 'Metode pembayaran yang tersedia: QRIS, BANK, dan DANA.',
-  jasa: "Kami menyediakan jasa pembuatan dan pemeliharaan website serta menyediakan pembuatan desain.",
-  joki: "Kami bisa bisa membantu anda dalam hal joki tugas website atau tugas desain.",
-  platforms: "Kami bekerja dengan teknologi terbaru seperti React, Next.js, dan lainnya untuk membangun website yang berkualitas.",
-  support: "Kami menyediakan layanan dukungan teknis selama 24/7 untuk memastikan website Anda tetap berjalan dengan baik.",
-  consult: "Untuk konsultasi desain, silakan hubungi kami melalui menu service consultation. Kami akan membantu Anda merancang solusi desain yang sesuai kebutuhan."
+const HISTORY_CONTEXT = `
+Kamu adalah Teman Coding Assistant, asisten virtual yang ramah dan membantu untuk pengguna website Teman Coding.
+
+Tugas kamu:
+1. Jawab pertanyaan user dengan jelas, ramah, dan sopan.
+2. Jika memungkinkan, arahkan user ke menu yang relevan di website (contoh: pricing, service consultation, dll).
+3. Jangan langsung menjawab jika bisa diarahkan atau ditanya balik.
+4. Setelah menjawab, berikan 2–3 saran suggestion lanjutan yang relevan dengan topik yang sedang dibahas, dalam format array.
+5. Jangan menjawab pertanyaan yang tidak relevan dengan layanan Teman Coding. Baik itu membantu bikin codingan atau lainnya.
+6. Menjadi customer service.
+
+Informasi internal:
+- Teman Coding didirikan oleh Satria Mika Narendra pada tahun 2024.
+- Tujuan: membantu bisnis dan individu membangun kehadiran digital profesional.
+- Tim: 14 anggota (1 Founder, 1 PM, 2 Lead Project, 3 Frontend, 3 Backend, 3 UI/UX, 1 Admin).
+- Layanan: pembuatan & pemeliharaan website, desain, joki tugas (web/desain).
+- Order web: via menu "pricing".
+- Order desain/joki: via menu "service consultation".
+- Pembayaran: QRIS, BANK, DANA.
+- Teknologi: React, Next.js, dll.
+- Konsultasi desain: via menu "service consultation".
+- Dukungan teknis tersedia 24/7.
+
+Contoh format respons yang diharapkan:
+{
+  "result": "Halo! Untuk order jasa desain, kamu bisa klik menu 'service consultation'. Ada yang ingin kamu desainkan saat ini?",
+  "suggestions": ["Berapa lama proses pengerjaan desain?", "Apakah saya bisa revisi desain?", "Bisa bantu buat website sekaligus?"]
 }
 
+Note : 
+- Suggestion tidak boleh panjang, Max 3 kata.
+- Suggestion diberikan untuk pertanyaan dari user ke anda. 
+- Suggestion tidak selalu memakai tanda tanya (?) alias random (pakai / tidak pakai), Sesuai kondisi.
+
+User Question: [pertanyaan dari user]
+`;
 
 const benefits: IBenefit[] = [
   {
@@ -121,7 +141,8 @@ const portfolios: IPortofolios[] = [
     category: "Website",
     thumbnail_url: "/images/portfolio/coffee-shop.png",
     project_url: "https://kopisenja.id",
-    description: "Landing page clean untuk brand kopi lokal yang fokus pada estetika dan storytelling.",
+    description:
+      "Landing page clean untuk brand kopi lokal yang fokus pada estetika dan storytelling.",
     tech_stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
     started_at: "2023-03-01",
     completed_at: "2023-04-15",
@@ -135,7 +156,8 @@ const portfolios: IPortofolios[] = [
     category: "Mobile App",
     thumbnail_url: "/images/portfolio/fitness-app.png",
     project_url: "",
-    description: "Desain UI untuk aplikasi fitness dengan fitur tracking latihan dan meal plan.",
+    description:
+      "Desain UI untuk aplikasi fitness dengan fitur tracking latihan dan meal plan.",
     tech_stack: ["Figma", "React Native"],
     started_at: "2023-06-10",
     completed_at: "2023-07-05",
@@ -149,7 +171,8 @@ const portfolios: IPortofolios[] = [
     category: "Branding",
     thumbnail_url: "/images/portfolio/legal-brand.png",
     project_url: "",
-    description: "Logo, palet warna, dan guideline branding untuk startup layanan hukum digital.",
+    description:
+      "Logo, palet warna, dan guideline branding untuk startup layanan hukum digital.",
     tech_stack: ["Adobe Illustrator", "Photoshop"],
     started_at: "2022-11-01",
     completed_at: "2022-12-10",
@@ -157,5 +180,4 @@ const portfolios: IPortofolios[] = [
   },
 ];
 
-
-export { DATA_CS,benefits, pricings, portfolios };
+export { HISTORY_CONTEXT, benefits, pricings, portfolios };

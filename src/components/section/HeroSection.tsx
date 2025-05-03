@@ -20,7 +20,7 @@ const HeroSection = () => {
                     <Link href="/#pricing">
                         <Button className='bg-white !text-black rounded-full font-semibold px-6'>View Offers <CaretRight weight='bold' size={17} color='text-zinc-800' /></Button>
                     </Link>
-                    <Link href="https://wa.me/6281330409441?text=Halo, saya tertarik untuk berkonsultasi mengenai website." className='text-[14px] text-nowrap sm:text-[15px] !font-thin hover:underline underline-offset-2 text-zinc-50 ml-4'>Service Consultation</Link>
+                    <Link href="https://wa.me/6281330409441?text=Halo, Saya ingin berkonsultasi mengenai order di teman coding." className='text-[14px] text-nowrap sm:text-[15px] !font-thin hover:underline underline-offset-2 text-zinc-50 ml-4'>Service Consultation</Link>
                 </div>
             </div>
         </SectionContainer>
