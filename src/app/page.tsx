@@ -1,6 +1,6 @@
 "use client"
 
-import FloatingCS from "~/components/ui/Customer Service/FloatingCS";
+import FloatingCS from "~/components/ui/CustomerService/FloatingCS";
 import HeroBanner from "~/components/ui/HeroBanner";
 import PageContainer from "~/components/layouts/PageContainer";
 import BenefitSection from "~/components/section/BenefitSection";
@@ -10,13 +10,13 @@ import PricingSection from "~/components/section/PricingSection";
 
 const Home = () => {
   return (
-    <PageContainer>
-      <FloatingCS />
-      <HeroSection />
-      <BenefitSection />
-      <PortofolioSection />
-      <PricingSection />
-      <HeroBanner />
+    <PageContainer className="bg-[url('/images/backgrounds/light.png')] bg-cover bg-no-repeat bg-top h-full w-full">
+        <FloatingCS />
+        <HeroSection />
+        <BenefitSection />
+        <PortofolioSection />
+        <PricingSection />
+        <HeroBanner />
     </PageContainer>
   );
 }

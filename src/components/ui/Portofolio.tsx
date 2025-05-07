@@ -1,6 +1,7 @@
 import { Button } from '@heroui/react'
 import { CaretRight } from '@phosphor-icons/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Portofolio = () => {
@@ -17,7 +18,9 @@ const Portofolio = () => {
                     </div>
                     <p className='max-w-[450px] text-[12px] lg:text-[20px] font-thin'>NeoNest provides professional web development, creative design, and social media boosting services to help your brand grow and stand out online.</p>
                     <div className='mt-2'>
-                        <Button className='rounded-full w-[120px] lg:w-[140px] h-[38px] bg-white font-medium '>Live Demo <CaretRight weight='bold' className='shrink-0' /> </Button>
+                        <Link href='https://neonestid.vercel.app/' target='_blank' className='w-full'>
+                            <Button className='rounded-full w-[120px] lg:w-[140px] h-[38px] bg-white font-medium '>Live Demo <CaretRight weight='bold' className='shrink-0' /> </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

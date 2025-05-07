@@ -1,8 +1,8 @@
 import React from 'react'
 
-const PageContainer = ({ children }: { children: React.ReactNode }) => {
+const PageContainer = ({ children, className }: { children: React.ReactNode, className?: string }) => {
     return (
-        <div className='relative overflow-x-hidden'>
+        <div className={`relative overflow-x-hidden ${className}`}>
             {children}
         </div>
     )
